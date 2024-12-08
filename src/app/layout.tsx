@@ -15,12 +15,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" >
+    <html lang="en" suppressHydrationWarning>
       <body>
         <TRPCReactProvider>
-          {/* <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange> */}
+          <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
             {children}
-          {/* </ThemeProvider> */}
+          </ThemeProvider>
         </TRPCReactProvider>
       </body>
     </html>
